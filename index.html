@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVI INT UDYOG | Quality Clay Bricks</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html,body{width:100%;height:100%;overflow:hidden;background:#111;color:#fff}
+body{touch-action:pan-x}
+#slider{width:100vw;height:100vh;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+#slider::-webkit-scrollbar{display:none}
+.page{flex:0 0 100vw;width:100vw;height:100vh;scroll-snap-align:start;position:relative;display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden}
+.page:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.42),rgba(0,0,0,.78));z-index:0}
+.hero{background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.6)),url("images/hero.jpg") center/cover no-repeat}
+.hero-content{position:relative;z-index:2;width:min(900px,94%);text-align:center}
+.logo-text{font-size:clamp(35px,7vw,80px);font-weight:900;letter-spacing:3px;color:#ffb347;text-shadow:0 4px 15px #000}
+.hero h2{margin-top:15px;font-size:clamp(25px,5vw,52px)}
+.hero p{margin-top:10px;font-size:clamp(16px,2.5vw,22px);line-height:1.5}
+.panel{width:min(1100px,95%);min-height:65vh;display:grid;grid-template-columns:1fr 1fr;background:rgba(20,20,20,.84);border:1px solid rgba(255,255,255,.12);border-radius:25px;overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.photo{min-height:400px;background-position:center;background-size:cover;background-repeat:no-repeat}
+.text{display:flex;align-items:center;padding:45px}
+.text h2,.card h2{font-size:clamp(30px,5vw,55px);color:#ffb347;margin-bottom:18px}
+.text p,.card p{font-size:18px;line-height:1.7;color:#eee}
+.about{background:#191919}.about .photo{background-image:url("images/owner.jpg")}
+.factory{background:#111}.factory .photo{background-image:url("images/factory.jpg")}
+.product{background:#171717}.product .photo{background-image:url("images/product.jpg")}
+.order{background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.84)),url("images/bricks-stack.jpg") center/cover no-repeat}
+.card{width:min(650px,94%);position:relative;z-index:2;background:rgba(15,15,15,.94);border:1px solid rgba(255,179,71,.35);border-radius:25px;padding:35px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+form{display:flex;flex-direction:column;gap:13px}
+input,textarea{width:100%;border:1px solid #444;outline:none;border-radius:12px;padding:15px;background:#222;color:#fff;font-size:16px}
+input:focus,textarea:focus{border-color:#ffb347}
+textarea{min-height:100px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 22px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffb347,#ff7b00);color:#111;font-weight:800;font-size:16px;text-decoration:none;cursor:pointer;margin-top:10px;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn:active{transform:scale(.98)}
+.location{background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.85)),url("images/kiln.jpg") center/cover no-repeat}.location .card,.last .card{text-align:center}
+.last{background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.88)),url("images/delivery.jpg") center/cover no-repeat}
+.small{margin-top:18px;font-size:14px!important;color:#aaa!important}
+.side-nav{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:8px}
+.side-nav button{width:40px;height:40px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:rgba(0,0,0,.65);color:#fff;cursor:pointer;font-size:16px}
+.side-nav button:hover{background:#ff8b00;color:#111}
+.dots{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:50;display:flex;gap:8px}.dot{width:9px;height:9px;border-radius:50%;background:#777}.dot.active{background:#ff9d2e;transform:scale(1.35)}
+@media(max-width:700px){.page{padding:15px}.panel{grid-template-columns:1fr;max-height:88vh;overflow-y:auto}.photo{min-height:220px}.text{padding:25px}.text p{font-size:16px}.card{padding:24px 18px;max-height:88vh;overflow-y:auto}.side-nav{right:7px}.side-nav button{width:35px;height:35px}.hero-content{padding-right:22px}}
+</style>
+</head>
+<body>
+<div class="side-nav">
+<button type="button" onclick="goToPage(0)">⌂</button><button type="button" onclick="goToPage(1)">1</button><button type="button" onclick="goToPage(2)">2</button><button type="button" onclick="goToPage(3)">3</button><button type="button" onclick="goToPage(4)">🛒</button><button type="button" onclick="goToPage(5)">📍</button><button type="button" onclick="goToPage(6)">☎</button>
+</div>
+<main id="slider">
+<section class="page hero"><div class="hero-content"><div class="logo-text">DEVI INT UDYOG</div><h2>मजबूत घर की शुरुआत मजबूत ईंट से</h2><p>जहानाबाद में भरोसेमंद ईंट सप्लायर</p><p>15 साल के अनुभव से बनी ईंट</p><p>ईंट की क्वालिटी में कोई कॉम्प्रोमाइज नहीं</p><p>ईंट ऐसी कि देखने वाले भी बोले — क्या ईंट है!</p><p>घर चले सालों साल, मजबूत ईंट की पहचान DEVI ईंट से</p><p><b>Supply Nearby Jehanabad</b></p><button type="button" class="btn" onclick="goToPage(4)">🛒 ORDER NOW</button></div></section>
+<section class="page about"><div class="panel"><div class="photo"></div><div class="text"><div><h2>ABOUT US</h2><p>DEVI INT UDYOG में मजबूत और भरोसेमंद clay bricks पर हमारा फोकस है।</p><p style="margin-top:15px">15+ वर्षों के customer trust और quality-focused supply के साथ हम Jehanabad और आसपास के क्षेत्रों में ईंट की supply करते हैं।</p><p style="margin-top:15px">मजबूत घर के लिए मजबूत ईंट — यही हमारी पहचान है।</p></div></div></div></section>
+<section class="page factory"><div class="panel"><div class="text"><div><h2>OUR INDUSTRY</h2><p>हमारी industry में ईंट की quality और supply पर विशेष ध्यान दिया जाता है।</p><p style="margin-top:15px">DEVI INT UDYOG — Quality Clay Bricks.</p></div></div><div class="photo"></div></div></section>
+<section class="page product"><div class="panel"><div class="photo"></div><div class="text"><div><h2>OUR BRICKS</h2><p>Quality clay bricks, मजबूत निर्माण के लिए।</p><p style="margin-top:15px">Supply Nearby Jehanabad.</p><button type="button" class="btn" onclick="goToPage(4)">🛒 ORDER NOW</button></div></div></div></section>
+<section class="page order"><div class="card"><h2>ORDER NOW</h2><p style="margin-bottom:20px">अपनी जानकारी भरें और WhatsApp पर order details भेजें।</p><form id="orderForm"><input type="text" id="customerName" placeholder="Customer Name" autocomplete="name" required><input type="tel" id="customerMobile" placeholder="Mobile Number" inputmode="numeric" maxlength="10" autocomplete="tel" required><input type="text" id="customerAddress" placeholder="Address" autocomplete="street-address" required><input type="text" id="brickQuantity" placeholder="Brick Quantity" required><textarea id="customerMessage" placeholder="Additional Message (Optional)"></textarea><button class="btn" type="submit">💬 SEND ORDER ON WHATSAPP</button></form><p id="orderStatus" style="display:none;margin-top:14px;color:#ffb347;font-size:14px"></p></div></section>
+<section class="page location"><div class="card"><h2>VISIT OUR INDUSTRY</h2><p>Jamanganj, Budhubigha Road<br>Makhdumpur, Bihar 804405</p><a class="btn" href="https://maps.app.goo.gl/B1RpbJpaFWSFnTdj8" target="_blank" rel="noopener">📍 OPEN GOOGLE MAPS</a><p class="small">Owner: Ramesh Singh • 9661446204</p></div></section>
+<section class="page last"><div class="card"><h2>CONTACT DEVI INT UDYOG</h2><p>ईंट के order के लिए सीधे संपर्क करें।</p><a class="btn" href="tel:+919661446204">📞 CALL OWNER</a><a class="btn" href="https://wa.me/919661446204" target="_blank" rel="noopener">💬 WHATSAPP</a></div></section>
+</main>
+<div class="dots"><i class="dot active"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<script>
+const slider=document.getElementById('slider');
+const pages=[...document.querySelectorAll('.page')];
+const dots=[...document.querySelectorAll('.dot')];
+function goToPage(index){index=Math.max(0,Math.min(pages.length-1,index));pages[index].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});}
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const i=pages.indexOf(entry.target);dots.forEach((d,n)=>d.classList.toggle('active',n===i));}})},{root:slider,threshold:.65});
+pages.forEach(p=>observer.observe(p));
+
+document.getElementById('orderForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('customerName').value.trim();
+ const mobile=document.getElementById('customerMobile').value.replace(/\D/g,'');
+ const address=document.getElementById('customerAddress').value.trim();
+ const qty=document.getElementById('brickQuantity').value.trim();
+ const message=document.getElementById('customerMessage').value.trim();
+ const status=document.getElementById('orderStatus');
+ if(!name||!mobile||!address||!qty){status.style.display='block';status.textContent='कृपया Name, Mobile, Address और Quantity भरें।';return;}
+ if(mobile.length!==10){status.style.display='block';status.textContent='कृपया सही 10 digit mobile number डालें।';return;}
+ const text=`🧱 DEVI INT UDYOG - NEW ORDER\n\nCustomer Name: ${name}\nMobile: ${mobile}\nAddress: ${address}\nBrick Quantity: ${qty}\nMessage: ${message||'N/A'}`;
+ const url='https://wa.me/919661446204?text='+encodeURIComponent(text);
+ status.style.display='block';status.textContent='WhatsApp खोला जा रहा है...';
+ window.location.href=url;
+});
+
+document.addEventListener('keydown',e=>{const current=Math.round(slider.scrollLeft/window.innerWidth);if(e.key==='ArrowRight')goToPage(current+1);if(e.key==='ArrowLeft')goToPage(current-1);});
+</script>
+</body>
+</html>
